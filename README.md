@@ -16,10 +16,22 @@ This Python app downloads files from and reconfigures settings on Wellue O2Ring 
 ### Prerequisites
 [Python 3.6-3.8](https://www.python.org) and [Bluetooth Low Energy platform Agnostic Klient (bleak)](https://github.com/hbldh/bleak).  It did not work on Python 3.9 on Windows for me.
 
+#### Linux prerequisites
+You may need to install the xcb cursor library in Linux:
+```
+# Debian based distros
+sudo apt install libxcb-cursor-dev
+# or
+sudo apt install libxcb-*
+
+# Redhat/Fedora based distro
+sudo dnf install xcb-util-cursor*
+```
+
 ### Installing
 On Windows all I had to do to install bleak was 
 ```
-sudo pip3 install bleak
+pip3 install bleak
 ```
 To run this app just download it and run `python3 o2ring.py`.  Currently the settings need to be passed on the command line
 ```
